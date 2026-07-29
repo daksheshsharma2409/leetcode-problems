@@ -19,7 +19,7 @@ public:
             double prob = maxHeap.top().first;
             int node = maxHeap.top().second;
             maxHeap.pop();
-
+            if (node == end_node) return prob;
             for (auto it : adj[node]){
                 int v = it.first;
                 double wt = it.second;
